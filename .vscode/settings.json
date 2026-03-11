@@ -1,0 +1,22 @@
+{
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggest.showWords": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    },
+    "editor.wordBasedSuggestions": "on"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "plaintext": true
+  }
+}
