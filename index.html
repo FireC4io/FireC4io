@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caio Cesar · Backend Developer</title>
+  <meta name="description" content="Portfólio de Caio Cesar — desenvolvedor backend focado em bancos de dados, Node.js/NestJS e confiabilidade de sistemas." />
+  <meta property="og:title" content="Caio Cesar · Backend Developer" />
+  <meta property="og:description" content="Backend, bancos de dados e sistemas que movem dados com segurança." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://firec4io.github.io/FireC4io/" />
+  <meta name="theme-color" content="#0b0f17" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230b0f17'/><text x='50%' y='56%' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-weight='700' font-size='30' fill='%234f8ef7'>&gt;_</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --bg-2: #111827;
+      --card: #131a26;
+      --border: #1f2a3a;
+      --text: #e6edf3;
+      --muted: #8b98a9;
+      --accent: #4f8ef7;
+      --accent-2: #22d3a6;
+      --radius: 14px;
+      --mono: "JetBrains Mono", ui-monospace, monospace;
+    }
+    :root[data-theme="light"] {
+      --bg: #f7f9fc;
+      --bg-2: #eef2f8;
+      --card: #ffffff;
+      --border: #dde4ee;
+      --text: #0f172a;
+      --muted: #55657a;
+      --accent: #2563eb;
+      --accent-2: #0d9488;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 82%, transparent);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+    .logo { font-family: var(--mono); font-weight: 600; color: var(--accent); }
+    .logo span { color: var(--text); }
+    .nav-links { display: flex; gap: 22px; align-items: center; font-size: 14px; color: var(--muted); }
+    .nav-links a:hover { color: var(--text); }
+    .theme-btn {
+      background: var(--card); border: 1px solid var(--border); color: var(--text);
+      width: 36px; height: 36px; border-radius: 10px; cursor: pointer; font-size: 16px;
+    }
+    @media (max-width: 640px) { .nav-links a { display: none; } }
+
+    /* Hero */
+    .hero { padding: 96px 0 72px; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ""; position: absolute; inset: -40% -10% auto auto; width: 620px; height: 620px;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent) 22%, transparent), transparent 65%);
+      pointer-events: none;
+    }
+    .tag {
+      display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 13px;
+      color: var(--accent-2); background: color-mix(in srgb, var(--accent-2) 10%, transparent);
+      border: 1px solid color-mix(in srgb, var(--accent-2) 30%, transparent);
+      padding: 4px 12px; border-radius: 999px; margin-bottom: 24px;
+    }
+    .tag .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-2); animation: pulse 2s infinite; }
+    @keyframes pulse { 50% { opacity: .35; } }
+    h1 { font-size: clamp(40px, 7vw, 68px); line-height: 1.05; font-weight: 800; letter-spacing: -0.03em; }
+    h1 .grad {
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .role { font-family: var(--mono); color: var(--muted); margin: 18px 0 10px; font-size: 15px; }
+    .role .cursor { display: inline-block; width: 9px; height: 1.1em; background: var(--accent); vertical-align: text-bottom; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .lead { font-size: 19px; color: var(--muted); max-width: 620px; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 10px;
+      font-weight: 600; font-size: 15px; border: 1px solid var(--border); background: var(--card);
+      transition: transform .15s, border-color .15s;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn svg { width: 18px; height: 18px; fill: currentColor; }
+
+    /* Sections */
+    section { padding: 72px 0; }
+    .sec-head { margin-bottom: 36px; }
+    .sec-head .num { font-family: var(--mono); color: var(--accent); font-size: 14px; }
+    h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; letter-spacing: -0.02em; }
+    .muted { color: var(--muted); }
+
+    .about { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: start; }
+    .about p + p { margin-top: 14px; }
+    .about strong { color: var(--text); }
+    .facts { list-style: none; display: grid; gap: 10px; }
+    .facts li {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 12px 16px; display: flex; gap: 12px; align-items: center; font-size: 15px;
+    }
+    @media (max-width: 800px) { .about { grid-template-columns: 1fr; } }
+
+    .stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .stack-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+    .stack-card h3 { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 14px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      font-size: 13px; padding: 5px 11px; border-radius: 8px; background: var(--bg-2);
+      border: 1px solid var(--border); font-weight: 500;
+    }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .project {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px; display: flex; flex-direction: column; gap: 12px;
+      transition: transform .2s, border-color .2s;
+    }
+    .project:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--accent) 60%, var(--border)); }
+    .project.featured { grid-column: 1 / -1; background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, var(--card)), var(--card)); }
+    .project .kind { font-family: var(--mono); font-size: 12px; color: var(--accent-2); }
+    .project h3 { font-size: 21px; }
+    .project p { color: var(--muted); font-size: 15px; }
+    .project ul { color: var(--muted); font-size: 15px; padding-left: 18px; columns: 2; column-gap: 32px; }
+    @media (max-width: 640px) { .project ul { columns: 1; } }
+    .project .chips { margin-top: auto; padding-top: 6px; }
+    .links { display: flex; gap: 16px; font-size: 14px; font-weight: 600; }
+    .links a { color: var(--accent); }
+    .links a:hover { text-decoration: underline; }
+
+    .interests { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+    .interest {
+      font-family: var(--mono); font-size: 14px; padding: 14px 16px; border-radius: 12px;
+      border: 1px dashed var(--border); color: var(--muted);
+    }
+    .interest::before { content: "$ "; color: var(--accent-2); }
+
+    .snake { margin-top: 28px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; overflow-x: auto; }
+    .snake img { min-width: 640px; width: 100%; }
+
+    .contact { text-align: center; }
+    .contact .lead { margin: 12px auto 28px; }
+    .contact .cta { justify-content: center; }
+
+    footer { border-top: 1px solid var(--border); padding: 28px 0; text-align: center; font-size: 14px; color: var(--muted); }
+
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s, transform .6s; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="logo" href="#top">~/<span>caio</span></a>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#stack">Stack</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+        <button class="theme-btn" id="themeBtn" aria-label="Alternar tema claro/escuro">◐</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="tag"><span class="dot"></span> Aberto a oportunidades</div>
+      <h1>Olá, eu sou<br /><span class="grad">Caio Cesar</span></h1>
+      <p class="role">&gt; backend developer · data systems · linux<span class="cursor"></span></p>
+      <p class="lead">Construo sistemas confiáveis com os dados no centro — modelagem de banco, SQL eficiente e APIs que movem informação com segurança.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projetos">Ver projetos</a>
+        <a class="btn" href="https://github.com/FireC4io" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5Z"/></svg>
+          GitHub
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/caio-cesar-devback/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2Zm1.8 13.1H3.5V9h3.6v11.5ZM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0Z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <div class="wrap reveal">
+        <div class="sec-head"><div class="num">01.</div><h2>Sobre mim</h2></div>
+        <div class="about">
+          <div class="muted">
+            <p>Sou estudante de <strong>Desenvolvimento de Software Multiplataforma</strong> no Brasil, com foco em <strong>desenvolvimento backend, bancos de dados e confiabilidade de sistemas</strong>.</p>
+            <p>Gosto de trabalhar perto do núcleo das aplicações — desenhando <strong>modelos de dados</strong>, escrevendo <strong>SQL eficiente</strong> e construindo serviços que movem dados com segurança entre sistemas.</p>
+            <p>Boa parte do meu aprendizado vem de entender como sistemas reais funcionam por baixo dos panos, principalmente em <strong>ambientes Linux</strong>, lidando com automação, integrações e troubleshooting.</p>
+          </div>
+          <ul class="facts">
+            <li>🎓 Desenvolvimento de Software Multiplataforma</li>
+            <li>🧠 Bancos de dados, SQL e modelagem</li>
+            <li>⚙️ Backend com Node.js e NestJS</li>
+            <li>🐧 Usuário Linux no dia a dia</li>
+            <li>🚧 Construindo o Sangue Solidário</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="wrap reveal">
+        <div class="sec-head"><div class="num">02.</div><h2>Tech stack</h2></div>
+        <div class="stack">
+          <div class="stack-card"><h3>Linguagens</h3><div class="chips"><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">Bash</span></div></div>
+          <div class="stack-card"><h3>Backend</h3><div class="chips"><span class="chip">Node.js</span><span class="chip">NestJS</span><span class="chip">Express</span><span class="chip">TypeORM</span><span class="chip">Prisma</span></div></div>
+          <div class="stack-card"><h3>Bancos de dados</h3><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">SQL Server</span><span class="chip">MongoDB</span><span class="chip">Redis</span></div></div>
+          <div class="stack-card"><h3>Ferramentas</h3><div class="chips"><span class="chip">Linux</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">VS Code</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <div class="wrap reveal">
+        <div class="sec-head"><div class="num">03.</div><h2>Projetos</h2></div>
+        <div class="projects">
+          <article class="project featured">
+            <span class="kind">★ Projeto em destaque</span>
+            <h3>Sangue Solidário</h3>
+            <p>Plataforma que conecta doadores de sangue a hospitais e hemocentros pelo Brasil. Doação de sangue costuma ser urgente e difícil de coordenar — o objetivo é simplificar esse processo ligando doadores diretamente às instituições de saúde.</p>
+            <ul>
+              <li>Cadastro de doadores e sistema de matching</li>
+              <li>Acompanhamento de disponibilidade por tipo sanguíneo</li>
+              <li>Integração com hospitais e hemocentros</li>
+              <li>Arquitetura backend escalável</li>
+              <li>Modelagem relacional confiável</li>
+            </ul>
+            <div class="chips"><span class="chip">NestJS</span><span class="chip">TypeScript</span><span class="chip">PostgreSQL</span><span class="chip">TypeORM</span><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">Docker</span></div>
+            <div class="links"><a href="https://sangue-solidario-prototype.vercel.app" target="_blank" rel="noopener">Ver protótipo ↗</a></div>
+          </article>
+
+          <article class="project">
+            <span class="kind">Mobile · Saúde</span>
+            <h3>Gota Vital</h3>
+            <p>App de nutrição e acompanhamento de saúde: diário alimentar (base TACO + Open Food Facts) e análise de exames de sangue e bioimpedância com IA. Monorepo planejado com ADRs, modelagem de banco e contrato de API.</p>
+            <div class="chips"><span class="chip">NestJS</span><span class="chip">React Native</span><span class="chip">PostgreSQL</span><span class="chip">Turborepo</span></div>
+            <div class="links"><a href="https://github.com/FireC4io/minhasaude" target="_blank" rel="noopener">Código ↗</a></div>
+          </article>
+
+          <article class="project">
+            <span class="kind">API · Fatec Votorantim</span>
+            <h3>Conecta Social API</h3>
+            <p>Backend de uma plataforma para organizações sociais: gerenciamento de eventos, voluntários, famílias beneficiárias e doações, com integração a microsserviços.</p>
+            <div class="chips"><span class="chip">TypeScript</span><span class="chip">Node.js</span><span class="chip">Docker</span></div>
+            <div class="links"><a href="https://github.com/FireC4io/conecta-social-api" target="_blank" rel="noopener">Código ↗</a><a href="https://conecta-social-api.vercel.app" target="_blank" rel="noopener">Deploy ↗</a></div>
+          </article>
+
+          <article class="project">
+            <span class="kind">Web · Educação</span>
+            <h3>Resumão de Segurança da Informação</h3>
+            <p>Resumo interativo do semestre com simulado de 50 questões (modos completo, rápido e pegadinhas), feedback imediato e nota por assunto. HTML/CSS/JS puro.</p>
+            <div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span></div>
+            <div class="links"><a href="https://github.com/FireC4io/resumaobrabo" target="_blank" rel="noopener">Código ↗</a><a href="https://firec4io.github.io/resumaobrabo/" target="_blank" rel="noopener">Acessar ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="interesses">
+      <div class="wrap reveal">
+        <div class="sec-head"><div class="num">04.</div><h2>Interesses em engenharia</h2></div>
+        <div class="interests">
+          <div class="interest">arquitetura de banco de dados</div>
+          <div class="interest">otimização de queries SQL</div>
+          <div class="interest">confiabilidade de backend</div>
+          <div class="interest">arquitetura de APIs</div>
+          <div class="interest">internals do Linux</div>
+          <div class="interest">sistemas distribuídos</div>
+        </div>
+        <div class="snake">
+          <img id="snake" src="https://raw.githubusercontent.com/FireC4io/FireC4io/output/github-contribution-grid-snake-dark.svg" alt="Gráfico de contribuições do GitHub animado" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contact">
+      <div class="wrap reveal">
+        <div class="sec-head"><div class="num">05.</div><h2>Vamos conversar?</h2></div>
+        <p class="lead">Estou sempre aprendendo, construindo e melhorando sistemas. Se quiser trocar uma ideia sobre backend, dados ou uma oportunidade, me chama.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://www.linkedin.com/in/caio-cesar-devback/" target="_blank" rel="noopener">Conectar no LinkedIn</a>
+          <a class="btn" href="https://github.com/FireC4io" target="_blank" rel="noopener">Seguir no GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Caio Cesar · feito com HTML, CSS e café</div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var snake = document.getElementById("snake");
+      var base = "https://raw.githubusercontent.com/FireC4io/FireC4io/output/github-contribution-grid-snake";
+
+      function applyTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        snake.src = base + (theme === "light" ? ".svg" : "-dark.svg");
+      }
+
+      var saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      var prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+      applyTheme(saved || (prefersLight ? "light" : "dark"));
+
+      document.getElementById("themeBtn").addEventListener("click", function () {
+        var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+        applyTheme(next);
+        try { localStorage.setItem("theme", next); } catch (e) {}
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      var items = document.querySelectorAll(".reveal");
+      if (!("IntersectionObserver" in window)) {
+        items.forEach(function (el) { el.classList.add("in"); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>

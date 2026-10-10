@@ -6,8 +6,9 @@
 
 Building reliable systems and working with data at the core.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](    )
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/caio-cesar-devback/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/FireC4io)
+[![Portfolio](https://img.shields.io/badge/Portfolio-4F8EF7?style=flat-square&logo=googlechrome&logoColor=white)](https://firec4io.github.io/FireC4io/)
 
 ![Profile Views](https://komarev.com/ghpvc/?username=FireC4io&style=flat-square&color=4F8EF7&label=Profile+Views)
 
@@ -25,7 +26,7 @@ Much of my learning happens by exploring how real systems work under the hood, e
 
 Currently I'm developing **Sangue Solidário**, a platform designed to connect blood donors with hospitals and blood centers, helping improve donation coordination and accessibility.
 
-- 🎓 Studying **Multiplatform Systems Development**
+- 🎓 Studying **Multiplatform Software Development**
 - 🧠 Strong interest in **Databases, SQL, and Data Modeling**
 - ⚙️ Backend development with **Node.js**
 - 🐧 Daily Linux user
@@ -101,8 +102,15 @@ Key concepts explored in the project:
 
 **Technologies**
 
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white) | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) | ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white) | ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) | ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white) | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white) | ![TypeORM](https://img.shields.io/badge/TypeORM-000000?style=flat-square&logo=typeorm&logoColor=white) 
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![TypeORM](https://img.shields.io/badge/TypeORM-000000?style=flat-square&logo=typeorm&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
+[![Prototype](https://img.shields.io/badge/Live-Prototype-22D3A6?style=flat-square&logo=vercel&logoColor=white)](https://sangue-solidario-prototype.vercel.app)
 
 ---
 
@@ -125,6 +133,15 @@ Areas of technology I enjoy exploring:
 
 ---
 
+# Contribution Snake
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/FireC4io/FireC4io/output/github-contribution-grid-snake-dark.svg" />
+  <img alt="GitHub contribution snake" src="https://raw.githubusercontent.com/FireC4io/FireC4io/output/github-contribution-grid-snake.svg" />
+</picture>
+
+---
+
 # Connect With Me
 
 <div align="center">
@@ -132,6 +149,7 @@ Areas of technology I enjoy exploring:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/caio-cesar-devback/)
 
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FireC4io)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-4F8EF7?style=for-the-badge&logo=googlechrome&logoColor=white)](https://firec4io.github.io/FireC4io/)
 
 </div>
 
