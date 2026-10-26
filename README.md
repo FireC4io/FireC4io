@@ -129,7 +129,7 @@ Areas of technology I enjoy exploring:
 
 # GitHub Activity Graph
 
-[![Caio's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=FireC4io&theme=github-dark)](https://github.com/FireC4io)
+[![Caio's github activity graph](https://raw.githubusercontent.com/FireC4io/FireC4io/output/github-activity-graph.svg)](https://github.com/FireC4io)
 
 ---
 
